@@ -16,18 +16,26 @@
                     </div>
 
                     <div class="input-box">
-
-                        <?php  $form = \App\core\Form\Form::begin('',"post","row g-4") ?>
+                        <form class="row g-4" method="post" action="">
                             <div class="col-12">
-                                <?= $form->field($model,'fullname')?>
+                                <div class="form-floating theme-form-floating">
+                                    <input type="text" name="fullname" value="" class="form-control" id="fullname" placeholder="Full Name" >
+                                    <label>Họ và Tên</label>
+                                </div>
                             </div>
 
                             <div class="col-12">
-                                <?= $form->field($model,'email')->emailField()->emailLabel()?>
+                                <div class="form-floating theme-form-floating">
+                                    <input type="email" name="email" value="" class="form-control" id="email" placeholder="Email" >
+                                    <label>Email</label>
+                                </div>
                             </div>
 
                             <div class="col-12">
-                                <?= $form->field($model,'password')->passwordField()->passLabel()?>
+                                <div class="form-floating theme-form-floating">
+                                    <input type="password" name="password" value="" class="form-control" id="password" placeholder="password" >
+                                    <label>Password</label>
+                                </div>
                             </div>
 
                             <div class="col-12">
@@ -44,7 +52,7 @@
                             <div class="col-12">
                                 <button class="btn btn-animation w-100" type="submit">Đăng ký</button>
                             </div>
-                            <?php \App\core\Form\Form::end() ?>
+                        </form>
                     </div>
 
                     <div class="other-log-in">
