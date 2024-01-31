@@ -1,6 +1,6 @@
 <?php
 // Controller
-
+$semester = '';
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if(isset($_GET['semester'])) {
         $semester = $_GET['semester'];

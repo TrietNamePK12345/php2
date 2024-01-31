@@ -11,6 +11,7 @@ function find_by_semester($semester)
     return (array_key_exists($semester,$course) ? $course[$semester]: 'Invalid Course');
 }
 // Controller
+$semester = '';
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if(isset($_GET['semester'])) {
         $semester = $_GET['semester'];
@@ -30,7 +31,7 @@ $page_content = $course_name;
 </head>
 <body>
 <div class="container">
-    <?= $page_content; ?>
+    <?= $page_content ?>
     <form method="GET">
         <select class="form-select" name="semester" >
             <option selected>Chọn khóa học</option>

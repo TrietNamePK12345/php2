@@ -11,7 +11,7 @@ class Connection
             // Cấu hình DSN
             $dsn = 'mysql:dbname=' . $config['db'] . ';host=' . $config['host'];
 
-            $con = new PDO($dsn, $config['user'], $config['pass']);
+            $con = new PDO($dsn, $config['users']);
             self::$conn = $con;
         } catch (Exception $exception) {
             $mess = $exception->getMessage();
