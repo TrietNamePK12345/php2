@@ -1,3 +1,6 @@
+<?php
+use App\Core\Application;
+?>
 <!DOCTYPE html>
 <html lang="en">
 

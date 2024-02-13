@@ -1,6 +1,6 @@
 <?php
 
-namespace App\core;
+namespace App\Core;
 
 class Route
 {
@@ -37,7 +37,7 @@ class Route
 
         if ($callback === false) {
            Response::setStausCode(404);
-           return self::view('_404');
+           return self::view('errors/_404');
         }
 
         if (is_string($callback)) {
@@ -64,7 +64,7 @@ class Route
     {
         $layout = Controller::$layout;
         ob_start();
-        require_once Application::$ROOT_DIR."/app/views/layouts/$layout.php";
+        require_once Application::$ROOT_DIR."/resources/views/layouts/$layout.php";
         return ob_get_clean();
     }
 
@@ -73,8 +73,9 @@ class Route
         foreach ($params as $key => $value) {
             $$key = $value;
         }
+
         ob_start();
-        require_once Application::$ROOT_DIR."/app/views/$view.php";
+        require_once Application::$ROOT_DIR."/resources/views/$view.php";
         return ob_get_clean();
     }
 }

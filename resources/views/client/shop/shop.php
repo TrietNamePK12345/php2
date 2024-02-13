@@ -10,7 +10,7 @@
                                     <i class="fa-solid fa-bars"></i>
                                 </span>
                         </button>
-                        <a href="index.html" class="web-logo nav-logo">
+                        <a href="/" class="web-logo nav-logo">
                             <img src="<?= _WEB_ROOT ?>assets/client/images/logo/1.png" class="img-fluid blur-up lazyload" alt="">
                         </a>
 

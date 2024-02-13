@@ -167,7 +167,7 @@
                             <li class="back-btn"></li>
 
                             <li class="sidebar-list">
-                                <a class="sidebar-link sidebar-title link-nav" href="index.html">
+                                <a class="sidebar-link sidebar-title link-nav" href="dashboard">
                                     <i class="ri-home-line"></i>
                                     <span>Tổng Quan Tồn Kho</span>
                                 </a>
@@ -200,7 +200,7 @@
                                     </li>
 
                                     <li>
-                                        <a href="add-new-product.html">Nhà cung cấp</a>
+                                        <a href="danh-sach-nha-cung-cap">Nhà cung cấp</a>
                                     </li>
 
                                     <li>

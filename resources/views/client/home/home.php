@@ -122,8 +122,17 @@
 
                                     <div class="onhover-div onhover-div-login">
                                         <ul class="user-box-name">
+                                            <?php if(\App\Core\Session::getFlash('user')): ?>
+                                                <li class="product-box-contain">
+                                                    <a href="trang-ca-nhan"><?= \App\Core\Session::getFlash('user')['name'] ?></a>
+                                                </li>
+
+                                                <li class="product-box-contain">
+                                                    <a href="/dang-xuat">Đăng xuất</a>
+                                                </li>
+
+                                            <?php else: ?>
                                             <li class="product-box-contain">
-                                                <i></i>
                                                 <a href="dang-nhap">Đăng nhập</a>
                                             </li>
 
@@ -134,6 +143,7 @@
                                             <li class="product-box-contain">
                                                 <a href="quen-mat-khau">Quên mật khẩu</a>
                                             </li>
+                                            <?php endif ?>
                                         </ul>
                                     </div>
                                 </li>
@@ -765,7 +775,7 @@
                                 <div class="banner-details p-center-left p-4">
                                     <div>
                                         <h3 class="text-exo">50% offer</h3>
-                                            <h4 class="text-russo fw-normal theme-color mb-2">Thịt tươi sống</h4>
+                                        <h4 class="text-russo fw-normal theme-color mb-2">Thịt tươi sống</h4>
                                         <button onclick="location.href = '/';" class="btn btn-animation btn-sm mend-auto">Đến cửa hàng  <i class="fa-solid fa-arrow-right icon"></i></button>
                                     </div>
                                 </div>

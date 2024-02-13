@@ -1,14 +1,19 @@
 <?php
+use App\Core\Application as App;
+
+
 /*
 | Register The Auto Loader
 |--------------------------------------------------------------------------
 */
-require_once __DIR__.'/../vendor/autoload.php';
-require_once __DIR__.'/../config/web_root.php';
 
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../config/web_root.php';
 
-use App\core\Application as App;
-$app = new App( dirname(__DIR__));
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
+
+$app = new App(dirname(__DIR__));
 
 
 /*
@@ -16,11 +21,9 @@ $app = new App( dirname(__DIR__));
 |--------------------------------------------------------------------------
 */
 
-require_once __DIR__.'/../routes/web.php';
+require_once __DIR__ . '/../routes/web.php';
 
-/*
-|--------------------------------------------------------------------------
-*/
+
 
 
 /*
@@ -30,6 +33,3 @@ require_once __DIR__.'/../routes/web.php';
 
 $app::run();
 
-/*
-|--------------------------------------------------------------------------
-*/

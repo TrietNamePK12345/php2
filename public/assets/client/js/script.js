@@ -442,9 +442,6 @@ if (contentwidth < "767") {
 /*=====================
    25. Sidebar Hide & Show Js
    ==========================*/
-$(".navbar-toggler-icon-2").click(function () {
-    $(".bg-overlay, .sidebar-col").addClass("show");
-});
-$(".bg-overlay").click(function () {
-    $(".bg-overlay, .sidebar-col").removeClass("show");
-});
+setTimeout(function() {
+    document.getElementById('successMessage').style.display = 'none';
+}, 60000); // 10 seconds

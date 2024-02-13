@@ -12,3 +12,4 @@ if(!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on')
 
 define('_WEB_ROOT', $web_root);
 
+

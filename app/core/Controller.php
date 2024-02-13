@@ -1,6 +1,6 @@
 <?php
 
-namespace App\core;
+namespace App\Core;
 
 class Controller
 {
@@ -11,6 +11,7 @@ class Controller
     }
     public static function render($view, $params = [])
     {
-        return Route::view($view, $params);
+        $content = Route::view($view, $params);
+        TemplateEngine::run($content, $params);
     }
 }
